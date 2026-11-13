@@ -32,10 +32,10 @@ O projeto aplica práticas completas de **Branding Mobile** e **Automação Nati
 ## 📸 Capturas de Tela & Mockups do App
 
 ### 1. Mockup do Aplicativo em Execução
-![Mockup CryptoWatch](docs/mockup-cryptowatch.png)
+![Mockup CryptoWatch](1.jpeg)
 
 ### 2. Ícone Nativo na Tela Inicial do Dispositivo
-![Ícone na Home Screen](docs/home-screen-icon.png)
+![Ícone na Home Screen](2.jpeg)
 
 ---
 
