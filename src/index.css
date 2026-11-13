@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #060B19;
+    color: #F8FAFC;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    overflow-x: hidden;
+  }
+}
+
+/* =========================================================
+   ANIMAÇÕES E UTILITÁRIOS 3D HARDWARE-ACCELERATED
+   ========================================================= */
+
+.scene-3d {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Camadas de profundidade Z dentro dos cards 3D */
+.z-layer-1 {
+  transform: translateZ(18px);
+}
+
+.z-layer-2 {
+  transform: translateZ(34px);
+}
+
+.z-layer-3 {
+  transform: translateZ(50px);
+}
+
+/* Moeda 3D Giratória */
+@keyframes spinCoin3D {
+  0% {
+    transform: rotateY(0deg) rotateX(8deg);
+  }
+  50% {
+    transform: rotateY(180deg) rotateX(-8deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(8deg);
+  }
+}
+
+.coin-3d-spin {
+  transform-style: preserve-3d;
+  animation: spinCoin3D 7s linear infinite;
+}
+
+.coin-3d-spin-fast {
+  transform-style: preserve-3d;
+  animation: spinCoin3D 1.2s linear infinite;
+}
+
+/* Flutuação suave em 3D */
+@keyframes float3D {
+  0%, 100% {
+    transform: translateY(0px) translateZ(28px);
+  }
+  50% {
+    transform: translateY(-5px) translateZ(38px);
+  }
+}
+
+.float-3d {
+  animation: float3D 4s ease-in-out infinite;
+}
+
+/* Entrada de Modal com Perspectiva 3D */
+@keyframes modalPop3D {
+  0% {
+    opacity: 0;
+    transform: perspective(900px) rotateX(18deg) translateY(36px) scale(0.94);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(900px) rotateX(0deg) translateY(0px) scale(1);
+  }
+}
+
+.animate-modal-3d {
+  animation: modalPop3D 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Grade de fundo cibernética em perspectiva */
+.cyber-grid-3d {
+  background-image: 
+    linear-gradient(to right, rgba(34, 211, 238, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(245, 158, 11, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  transform: perspective(500px) rotateX(45deg);
+  transform-origin: top center;
+}
